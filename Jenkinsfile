@@ -33,7 +33,6 @@ pipeline {
     stage('Release') {
       steps {
         echo 'Release'
-        git(url: 'https://github.com/MattRank93/THIS.git', branch: 'dev', credentialsId: 'mattrank93git')
         input(message: 'Send to Deployment?', ok: 'Yes')
       }
     }
