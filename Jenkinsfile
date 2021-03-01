@@ -30,17 +30,10 @@ pipeline {
       }
     }
 
-    stage('Deployment Promt') {
+    stage('Deployement') {
       steps {
         echo 'Deployment'
-        input(message: 'Deploy to Production?', ok: 'yes')
-      }
-    }
-
-    stage('') {
-      steps {
-        echo 'Deployment'
-        git(url: 'https://github.com/MattRank93/THIS.git', branch: 'dev')
+        git(url: 'https://github.com/MattRank93/THIS.git', branch: 'dev', credentialsId: 'mattrank93git')
       }
     }
 
