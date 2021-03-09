@@ -6,11 +6,13 @@ pipeline {
     }
 
     stages {
-        stage('Compile') {
-            steps {
-                gradlew('clean', 'classes')
+        stages {
+                stage('Build') {
+                    steps {
+                        sh 'npm install'
+                    }
+                }
             }
-        }
         stage('Unit Tests') {
             steps {
                 gradlew('test')
