@@ -14,6 +14,7 @@ router.patch('/elevate', verifyJWT_MW_admin ,   catchErrors(admin.elevate_status
 // TODO: make client patch method and switch back to patch
 router.patch('/lower', verifyJWT_MW_admin ,  catchErrors(admin.lower_status));
 
+
 router.post('/add-hospital', verifyJWT_MW_admin , catchErrors(hospital.add_hospital))
 
 
