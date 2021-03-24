@@ -1,0 +1,5 @@
+{
+    "url": "192.168.0.106:9984/api/v1/",
+    "app_id": "// add your testnet add id here",
+    "app_key": "// add your testnet key here"
+}
