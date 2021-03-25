@@ -19,6 +19,7 @@
     "pug": "2.0.0-beta11"
   },
   "devDependencies": {
+    "bigchaindb-orm": "^3.0.3",
     "dotenv": "^8.2.0",
     "express-validator": "^6.7.0",
     "jsonwebtoken": "^8.5.1",

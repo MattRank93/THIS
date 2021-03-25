@@ -1,0 +1,22 @@
+{
+    "assets": [
+        {
+        "name": "bighospital",
+        "schema": {
+            "county": "String"
+        }
+        },
+        {
+        "name": "bigpatient",
+        "schema": {
+            "name": "String"
+        }
+        },
+        {
+            "name": "bigdoctor",
+            "schema": {
+                "ndoctor_id": "String"
+            }
+        }
+    ]
+}

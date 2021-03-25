@@ -15,6 +15,8 @@ const User = require('./src/models/UsersModel');
 const errorHandlers = require('./src/middleware/error-handlers.js');
 const authHandlers = require('./src/middleware/auth.js');
 const {config} = require('dotenv');
+//const assetConfig = ('src/Bigchaindb/BigConfigs/asset.config.json');
+
 
 var BighospitalsRouter = require('./src/Bigchaindb/bigchaindbroutes/Bighospitals.js');
 var indexRouter = require('./src/routes/index');
@@ -28,6 +30,7 @@ server.set('views', path.join(__dirname, 'views'));
 server.set('view engine', 'pug');
 
 server.use(logger('dev'));
+//server.use(assetConfig);
 server.use(express.json());
 server.use(express.urlencoded({ extended: false }));
 server.use(cookieParser());
