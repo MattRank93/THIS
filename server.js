@@ -16,7 +16,7 @@ const errorHandlers = require('./src/middleware/error-handlers.js');
 const authHandlers = require('./src/middleware/auth.js');
 const {config} = require('dotenv');
 
-var BighospitalsRouter = require('./src/bigchaindbroutes/Bighospitals.js');
+var BighospitalsRouter = require('./src/Bigchaindb/bigchaindbroutes/Bighospitals.js');
 var indexRouter = require('./src/routes/index');
 var usersRouter = require('./src/routes/users');
 var adminRouter = require('./src/routes/admin');
