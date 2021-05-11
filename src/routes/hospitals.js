@@ -6,5 +6,5 @@ const { verifyJWT_MW } = require('../middleware/jwt');
 
 /* GET users listing. */
 
-router.get('/hospitals', verifyJWT_MW , catchErrors(hospitals.read_by_errthing));
+router.get('/appointments', verifyJWT_MW , catchErrors(hospitals.read_by_errthing));
 module.exports = router;

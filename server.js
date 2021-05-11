@@ -10,7 +10,7 @@ const { verifyJWT_MW } = require("./src/middleware/jwt");
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/thisdb');
-const Hospital = require('./src/models/HospitalsModel');
+const Hospital = require('./src/models/AppointmentsModel');
 const User = require('./src/models/UsersModel');
 const errorHandlers = require('./src/middleware/error-handlers.js');
 const authHandlers = require('./src/middleware/auth.js');
