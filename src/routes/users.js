@@ -18,11 +18,11 @@ router.patch('/update_user', verifyJWT_MW , catchErrors(users.update_user))
 
 router.get('/appointments_slots', verifyJWT_MW , catchErrors(appointment.read_all_appt_slot));
 
-// router.post('/add_appt', verifyJWT_MW , catchErrors(appointment.make_appt))
+//router.post('/add_appt', verifyJWT_MW , catchErrors(appointment.make_appt))
 
 router.patch('/update_appt', verifyJWT_MW , catchErrors(appointment.update_appt_slot))
 
-// router.post('/delete_appt', verifyJWT_MW , catchErrors(appointment.delete_appt))
+//router.post('/delete_appt', verifyJWT_MW , catchErrors(appointment.delete_appt))
 
 
 module.exports = router;

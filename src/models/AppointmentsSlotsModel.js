@@ -25,11 +25,11 @@ const AppointmentsSlotModel = new Schema(
             "type": "String",
             default: uuid.v1
         },
-        "emp_id": {
+        "emp_uuid": {
             "type": "String",
             required: "no uuid attached",
         },
-        "Client_id": {
+        "client_uuid": {
             "type": "String",
             default: 'free'
         }
