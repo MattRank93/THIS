@@ -10,7 +10,8 @@ const { verifyJWT_MW } = require("./src/middleware/jwt");
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/thisdb');
-const Hospital = require('./src/models/AppointmentsModel');
+const Appointments = require('./src/models/AppointmentsModel');
+const AppointmentsSlot = require('./src/models/AppointmentsSlotsModel');
 const User = require('./src/models/UsersModel');
 const errorHandlers = require('./src/middleware/error-handlers.js');
 const authHandlers = require('./src/middleware/auth.js');
@@ -20,7 +21,7 @@ const {config} = require('dotenv');
 var indexRouter = require('./src/routes/index');
 var usersRouter = require('./src/routes/users');
 var adminRouter = require('./src/routes/admin');
-var hospitalRouter = require('./src/routes/appointments');
+ var employeeRouter = require('./src/routes/employees');
 var server = express();
 
 // view engine setup
@@ -39,7 +40,7 @@ server.use(bodyParser.urlencoded({ extended: true }));
 server.use('/', indexRouter);
 server.use('/', usersRouter);
 server.use('/', adminRouter);
-server.use('/', hospitalRouter);
+server.use('/', employeeRouter);
 
 require('dotenv').config({ path: 'variables.env' });
 

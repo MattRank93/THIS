@@ -1,9 +1,10 @@
 'use strict';
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const uuid = require('node-uuid');
 
 
-const AppointmentsModel = new Schema(
+const AppointmentsSlotModel = new Schema(
     {
         "title": {
             "type": "String",
@@ -17,9 +18,6 @@ const AppointmentsModel = new Schema(
             "type": "date",
             required: "Please enter a end time"
         },
-        "location": {
-            "type": "String"
-        },
         "__id": {
             "type": "String"
         },
@@ -27,14 +25,14 @@ const AppointmentsModel = new Schema(
             "type": "String",
             default: uuid.v1
         },
-        "emp_UUID": {
+        "emp_id": {
             "type": "String",
             required: "no uuid attached",
-            unique : 1
         },
-        "Client-Apt_UUID": {
-            "type": "String"
+        "Client_id": {
+            "type": "String",
+            default: 'free'
         }
     });
 
-module.exports = mongoose.model('appointments', AppointmentsModel);
+module.exports = mongoose.model('appointmentslot', AppointmentsSlotModel);

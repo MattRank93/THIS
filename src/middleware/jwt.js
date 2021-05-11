@@ -23,7 +23,7 @@ exports.verifyJWT_MW_employee = async (req, res, next) => {
             console.log(decodedToken.user.role)
             if(decodedToken.user.role === "employee"){
                 req.user = decodedToken.data
-                next()} else { res.status(400).json({message: "not an admin."})}
+                next()} else { res.status(400).json({message: "not an employee."})}
         })
         .catch((err) => {
             res.status(400)
