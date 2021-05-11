@@ -20,7 +20,7 @@ const {config} = require('dotenv');
 var indexRouter = require('./src/routes/index');
 var usersRouter = require('./src/routes/users');
 var adminRouter = require('./src/routes/admin');
-var hospitalRouter = require('./src/routes/hospitals');
+var hospitalRouter = require('./src/routes/appointments');
 var server = express();
 
 // view engine setup
