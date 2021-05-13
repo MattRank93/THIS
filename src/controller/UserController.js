@@ -94,3 +94,42 @@ exports.update_user=  async (req, res) => {
         } else { res.sendStatus(401)}
     });
 };
+
+/**
+ *
+ * reads by every property of a user
+ * @param req
+ * @param res
+ * @returns {Promise<void>}
+ */
+exports.delete_user=  async (req, res) => {
+
+    let object = {}
+
+    console.log(req.query)
+    console.log(req.body)
+
+    //const token = crypto.randomBytes(64).toString('hex')
+    object = req.body
+    //object.token = token
+    console.log(req.body.password)
+    if (req.body.email && req.body.password)
+        object.email = req.body.email
+    object.password = req.body.password
+    if (req.body.phone_number && req.body.password)
+        object.phone_number = req.body.phone_number
+    object.password = req.body.password
+
+    const users = await User.findOneAndUpdate({email: object.email}, object, {new: true},function(err, user) {
+
+
+        if (users.validPassword(req.body.password)) {
+            // const accessToken = jwt.sign({user: user}, "9x7D]'QN|x8z4d_)EsRrSCIxPZD73GOliM2R=S1~i?OWNm{Up>7aA=cMsqCxxf/")
+            // res.header('auth-token', accessToken)
+            res.send(users)
+        } else { res.sendStatus(401)}
+    });
+    // const apptointment_slot = await AppointmentSlot.findOneAndDelete(object).exec()
+        // .then(apptointment_slot => res.json({apptointment_slot}))
+        // .catch(err => console.log(err))
+};

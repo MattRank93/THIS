@@ -13,7 +13,7 @@ const {verifyJWT_MW_employee} = require("../middleware/jwt");
 
 // router.post('/register_emp', catchErrors(employees.register));
 
-router.patch('/login_emp', catchErrors(users.login))
+// router.patch('/login_emp', catchErrors(users.login))
 
 router.patch('/update_emp', verifyJWT_MW_employee , catchErrors(users.update_user))
 

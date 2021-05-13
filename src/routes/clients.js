@@ -10,13 +10,13 @@ const {verifyJWT_MW} = require("../middleware/jwt");
 /* GET users listing. */
 
 
-router.post('/register', catchErrors(users.register_user));
 
-router.patch('/login', catchErrors(users.login));
 
-router.delete('/delete', catchErrors(users.delete_user));
+router.get('/appointments_slots', verifyJWT_MW , catchErrors(appointment.read_all_appt));
 
-router.patch('/update_user', catchErrors(users.update_user))
+
+router.patch('/update_appt', verifyJWT_MW , catchErrors(appointment.update_appt_slot))
+
 
 
 module.exports = router;
