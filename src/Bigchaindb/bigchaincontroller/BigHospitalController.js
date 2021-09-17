@@ -40,10 +40,6 @@ exports.add_hospital = async (req, res) => {
 
     const assetdata = {
         'Hospital': {
-            'model': 'AR-15',
-            'serial_number': '167409',
-            'manufacturer': 'Korstog',
-            'state': 'WI',
         }
     }
     const metadata = {'planet': 'earth'}
